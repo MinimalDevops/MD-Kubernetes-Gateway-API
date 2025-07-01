@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: echo-svc
+  namespace: app1
+spec:
+  selector:
+    app: echo-app
+  ports:
+  - port: 80
+    targetPort: 5678
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: echo-svc
+  namespace: app2
+spec:
+  selector:
+    app: echo-app
+  ports:
+  - port: 80
+    targetPort: 5678
